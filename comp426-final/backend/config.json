@@ -1,0 +1,9 @@
+{
+	"MySQL": {
+		"user": "comp426-calendar",
+		"password": "A<3]%D:]Z:{dwcj.",
+		"host": "localhost",
+		"port": "3306",
+		"database": "COMP426"
+	}
+}

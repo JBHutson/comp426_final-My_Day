@@ -1,0 +1,89 @@
+<!-- COMP 426 Final Project: myDay Personalized Calendar....Authors: Yashar Asgari, Samuel Anderson, Daniel Estrada, James Hutson -->
+
+<!DOCTYPE html>
+
+<html lang = 'en'>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>
+    myDay
+    </title>
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="jscolor-2.0.4/jscolor.js"></script>
+    <script src="js.cookie.js"></script>
+    <script src="AJAXRequest.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="myday.css">
+    <link rel="stylesheet" type="text/css" href="bttn.min.css"> 
+    <!-- go to https://bttn.surge.sh/ to see button styles and css code (the button classes) -->
+    <link rel = "icon" href = "favicon.ico" type = "image/x-icon">
+</head>
+
+<body>
+
+    <div id = "userGreeting">
+        <i>Welcome Dude<i>
+         <!--user specific greeting message in this div<br>-->
+    </div>
+<br><br>
+    <div id = "popup">
+        </div>
+
+    <div id = "calendarDiv">
+      
+        <div id = "title">
+            <img src = "myDayLogo.png">
+        </div>
+
+        <div id = "month">
+            <!-- includes month and buttons to switch to prev/next (js) -->
+        </div>
+
+        <button class="bttn-fill bttn-sm bttn-primary" id = "prev">&laquo; Previous Month</button>
+        <button class="bttn-fill bttn-sm bttn-primary" id= "next">Next Month &raquo;</button>
+
+        <table id = "calendar">
+            <!-- variable sized grid div here based on current month -->
+        </table>
+
+    </div>
+
+    
+
+    <div id = "buttonArea">
+        <!--button menu div here <br>-->
+		<button id = "loginButton" class="bbttttn-stretch bttn-md bttn-primary">Login</button>
+		<button id = "logoutButton" class="bbttttn-stretch bttn-md bttn-primary">Logout</button>
+        <button id = "addEventButton" class="bbttttn-stretch bttn-md bttn-primary">Add Event</button>
+		<button id = "addUserButton" class="n-stretch bttn-md bttn-primary">Add User</button>
+		<button id = "deleteUserButton" class="n-stretch bttn-md bttn-primary">Delete User</button>
+        <b>    Change Background Color:<b> <input id = "changeBg" class="jscolor {valueElement:'changeBg'}" value="7bafd4"/>
+        <!--<button class="bttn-fill bttn-md bttn-primary" id="contactButton" type="button">Contacts</button>
+        -->
+    </div>
+
+    <div id = "weather">
+      <!--  <div style="width: 215px; margin-left: auto; margin-right: auto;"><iframe style="display: block;" src="https://cdnres.willyweather.com/widget/loadView.html?id=76933" width="215" height="228" frameborder="0" scrolling="no"></iframe><a style="z-index: 1;position: relative;text-indent: -9999em;margin: -20px 0 0 0;height: 20px;display: block" href="https://www.willyweather.com/nc/orange-county/chapel-hill.html" rel="nofollow">Weather report Chapel Hill</a></div>
+      (old weather widget)-->
+      <a class="weatherwidget-io" href="https://forecast7.com/en/35d91n79d06/chapel-hill/?unit=us" data-label_1="CHAPEL HILL" data-label_2="Current Weather" data-days="5" data-theme="weather_one" >CHAPEL HILL Current Weather</a>
+        <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io/js/widget.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");
+        </script>
+   
+    </div>
+
+    <div id="worldClock">
+        
+        <span style="color:red; font-size:18px;">Current local time in:</span>
+        <h3 id="london">London, United Kingdom 🇬🇧</h3> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=medium&timezone=Europe%2FLondon" width="300" height="100" frameborder="0" seamless></iframe>
+        <h3 id="Dubai">Dubai, United Arab Emirates 🇦🇪</h3> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=medium&timezone=Asia%2FDubai" width="100%" height="100" frameborder="0" seamless></iframe>
+        <h3 id="losAngeles">Los Angeles, United States 🇺🇸</h3> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=medium&timezone=America%2FLos_Angeles" width="100%" height="100" frameborder="0" seamless></iframe>
+        <h3 id="Tokyo">Tokyo, Japan 🇯🇵</h3> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=medium&timezone=Asia%2FTokyo" width="100%" height="100" frameborder="0" seamless></iframe>
+            
+    </div>
+
+
+
+</body>
+</html>
